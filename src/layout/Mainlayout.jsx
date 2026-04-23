@@ -4,9 +4,10 @@ import { Outlet } from 'react-router';
 
 const Mainlayout = () => {
     return (
-        <div>
+        <div className='container mx-auto'>
             <Navbar></Navbar>
             <Outlet></Outlet>
+            
         </div>
     );
 };
