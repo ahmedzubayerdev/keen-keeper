@@ -15,7 +15,7 @@ const Navbar = () => {
                     <NavLink 
                     to="/" 
                     className={({isActive})=>
-                    `flex gap-1 items-center ${
+                    `flex gap-1 items-center font-semibold ${
                             isActive ? "bg-[#244D3F] p-3 text-white rounded-sm" : "text-gray"
                             }`
                             }>
@@ -27,7 +27,7 @@ const Navbar = () => {
                     <NavLink
                      to="/timeline" 
                      className={({ isActive })=>
-                     `flex gap-1 items-center ${
+                     `flex gap-1 items-center font-semibold ${
                             isActive ? "bg-[#244D3F] p-3 text-white rounded-sm" : "text-gray"
                             }`
                             }>
@@ -39,7 +39,7 @@ const Navbar = () => {
                     <NavLink
                         to="/stats"
                         className={({ isActive }) =>
-                        `flex gap-1 items-center ${
+                        `flex gap-1 items-center font-semibold ${
                             isActive ? "bg-[#244D3F] p-3 text-white rounded-sm" : "text-gray"
                         }`
                         }
