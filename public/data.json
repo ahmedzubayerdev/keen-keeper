@@ -7,9 +7,9 @@
     "contact": 18,
     "status": "Overdue",
     "tags": ["UNIVARSITY"],
-    "bio": "We studied Computer Science together at Dhaka University. She now works as a UX designer and loves traveling.",
+    "bio": "University friend, UX designer",
     "goal": 14,
-    "next_due_date": "2026-04-20"
+    "due": "2026-04-20"
   },
   {
     "id": 2,
@@ -19,9 +19,9 @@
     "contact": 10,
     "status": "Almost Due",
     "tags": ["WORK"],
-    "bio": "Former colleague who introduced me to weight training. We still try to meet for workouts on weekends.",
+    "bio": "Former colleague, gym partner",
     "goal": 12,
-    "next_due_date": "2026-04-26"
+    "due": "2026-04-26"
   },
   {
     "id": 3,
@@ -31,9 +31,9 @@
     "contact": 5,
     "status": "On-Track",
     "tags": ["SCHOOL", "FRIEND"],
-    "bio": "Friend from high school. She’s a freelance illustrator and often shares her artwork with me.",
+    "bio": "School friend, freelance illustrator",
     "goal": 14,
-    "next_due_date": "2026-05-03"
+    "due": "2026-05-03"
   },
   {
     "id": 4,
@@ -43,9 +43,9 @@
     "contact": 21,
     "status": "Overdue",
     "tags": ["FAMILY"],
-    "bio": "My cousin who lives in Chittagong. We used to play cricket together during family gatherings.",
+    "bio": "Family cousin, cricket partner",
     "goal": 14,
-    "next_due_date": "2026-04-18"
+    "due": "2026-04-18"
   },
   {
     "id": 5,
@@ -55,9 +55,9 @@
     "contact": 13,
     "status": "Almost Due",
     "tags": ["NEIGHBOR"],
-    "bio": "Neighbor and fellow book lover. We exchange novels and discuss them over tea.",
+    "bio": "Neighbor friend, book lover",
     "goal": 14,
-    "next_due_date": "2026-04-25"
+    "due": "2026-04-25"
   },
   {
     "id": 6,
@@ -67,9 +67,9 @@
     "contact": 3,
     "status": "On-Track",
     "tags": ["STURTUP", "TECH"],
-    "bio": "Met at a startup event. We often discuss new tech ideas and potential collaborations.",
+    "bio": "'Startup contact, tech enthusiast'",
     "goal": 10,
-    "next_due_date": "2026-05-01"
+    "due": "2026-05-01"
   },
   {
     "id": 7,
@@ -79,9 +79,9 @@
     "contact": 16,
     "status": "Overdue",
     "tags": ["TRAVEL"],
-    "bio": "Travel partner for multiple trips around Bangladesh. We’re planning a trip to Bandarban next.",
+    "bio": "Travel partner, trip planner",
     "goal": 14,
-    "next_due_date": "2026-04-22"
+    "due": "2026-04-22"
   },
   {
     "id": 8,
@@ -91,11 +91,8 @@
     "contact": 7,
     "status": "On-Track",
     "tags": ["FRIEND"],
-    "bio": "Childhood friend and football enthusiast. We still catch matches together whenever possible.",
+    "bio": "'Childhood friend, football fan'",
     "goal": 14,
-    "next_due_date": "2026-05-02"
+    "due": "2026-05-02"
   }
 ]
-
-
-

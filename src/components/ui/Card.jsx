@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Card = ({ friend }) => {
   return (
-    <div className="p-6 ">
+    <Link to={`/card/${friend.id}`} className="p-6 ">
       <div className="flex justify-center items-center mb-3">
         <img
           src={friend.picture}
@@ -39,7 +40,7 @@ const Card = ({ friend }) => {
           {friend.status}
         </span>
       </div>
-    </div>
+    </Link>
   );
 };
 

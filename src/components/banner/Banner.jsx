@@ -1,11 +1,9 @@
 import { Plus } from "lucide-react";
-import React, { use } from "react";
 import Card from "../ui/Card";
-
-const friendsPromise = fetch("/data.json").then((res) => res.json());
+import useCards from "../../hooks/useCards";
 
 const Banner = () => {
-  const friends = use(friendsPromise);
+  const { friends } = useCards();
 
   return (
     <div className="container my-20 w-3/4 mx-auto ">
@@ -48,8 +46,8 @@ const Banner = () => {
           <h2>Your Friends</h2>
         </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {friends.map((friend) => {
-            return <Card friend={friend}></Card>;
+          {friends.map((friend, ind) => {
+            return <Card friend={friend} key={ind}></Card>;
           })}
         </div>
       </div>

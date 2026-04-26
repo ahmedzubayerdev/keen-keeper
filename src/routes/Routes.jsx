@@ -16,15 +16,15 @@ export const router = createBrowserRouter([
         Component: Homepage,
       },
       {
-        path: "/timeline",
+        path: "timeline",
         Component: Timeline,
       },
       {
-        path: "/:id",
+        path: "card/:id",
         Component: Carddetails,
       },
       {
-        path: "/stats",
+        path: "stats",
         Component: Stats,
       },
     ],
