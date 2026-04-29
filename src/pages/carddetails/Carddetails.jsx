@@ -1,5 +1,5 @@
-import React from "react";
-import { Link, useParams } from "react-router";
+import React, { useContext } from "react";
+import { Link, useNavigate, useParams } from "react-router";
 import useCards from "../../hooks/useCards";
 import {
   Archive,
@@ -9,20 +9,50 @@ import {
   Trash2,
   Video,
 } from "lucide-react";
+import { TimelineContext } from "../../components/context/TimelineContext";
 
 const Carddetails = () => {
   const { id } = useParams();
   const { friends } = useCards();
-  console.log(friends, "cardDetails");
-
   const expectedFriends = friends.find((friend) => friend.id == id);
+  const navigate = useNavigate();
+
+  const { setCallFriend, setTextFriend, setVideoFriend } =
+    useContext(TimelineContext);
+
   if (!friends || friends.length === 0) {
-    return <p>Loading...</p>;
+    return (
+      <p className="felx justify-center items-center text-3xl italic container">
+        Loading...
+      </p>
+    );
   }
 
   if (!expectedFriends) {
     return <p>Friend not found</p>;
   }
+
+  const handleCall = () => {
+    setCallFriend((prev) => {
+      const exists = prev.some((friend) => friend.id === expectedFriends.id);
+      return exists ? prev : [...prev, expectedFriends];
+    });
+    navigate("/timeline");
+  };
+  const handleText = () => {
+    setTextFriend((prev) => {
+      const exists = prev.some((friend) => friend.id === expectedFriends.id);
+      return exists ? prev : [...prev, expectedFriends];
+    });
+    navigate("/timeline");
+  };
+  const handleVideo = () => {
+    setVideoFriend((prev) => {
+      const exists = prev.some((friend) => friend.id === expectedFriends.id);
+      return exists ? prev : [...prev, expectedFriends];
+    });
+    navigate("/timeline");
+  };
   return (
     <div className="container mx-auto my-15 text-center ">
       <div className="flex gap-6 justify-center items-center">
@@ -51,9 +81,12 @@ const Carddetails = () => {
                 {expectedFriends.status}
               </span>
               <p>
-                {expectedFriends.tags.map((tag) => {
+                {expectedFriends.tags.map((tag, ind) => {
                   return (
-                    <span className="mr-2 rounded-2xl font-bold px-3 py-2 inline-block bg-[#CBFADB] text-[#244D3F]">
+                    <span
+                      key={ind}
+                      className="mr-2 rounded-2xl font-bold px-3 py-2 inline-block bg-[#CBFADB] text-[#244D3F]"
+                    >
                       {" "}
                       {tag}
                     </span>
@@ -124,15 +157,21 @@ const Carddetails = () => {
             <div className="grid grid-cols-3 gap-4">
               <div className="p-4 flex flex-col gap-2 justify-center items-center font-bold">
                 <PhoneCall></PhoneCall>
-                <p className="text-xl">Call</p>
+                <button className="text-xl" onClick={handleCall}>
+                  Call
+                </button>
               </div>
               <div className="p-4 flex flex-col gap-2 justify-center items-center font-bold">
                 <MessageSquareMore></MessageSquareMore>
-                <p className="text-xl">Text</p>
+                <button className="text-xl " onClick={handleText}>
+                  Text
+                </button>
               </div>
               <div className="p-4 flex flex-col gap-2 justify-center items-center font-bold">
                 <Video></Video>
-                <p className="text-xl">Video</p>
+                <button className="text-xl" onClick={handleVideo}>
+                  Video
+                </button>
               </div>
             </div>
           </div>
