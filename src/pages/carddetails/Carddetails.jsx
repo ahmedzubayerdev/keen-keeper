@@ -10,6 +10,7 @@ import {
   Video,
 } from "lucide-react";
 import { TimelineContext } from "../../components/context/TimelineContext";
+import { toast } from "react-toastify";
 
 const Carddetails = () => {
   const { id } = useParams();
@@ -37,6 +38,7 @@ const Carddetails = () => {
       const exists = prev.some((friend) => friend.id === expectedFriends.id);
       return exists ? prev : [...prev, expectedFriends];
     });
+    toast.success("Call logged 📞");
     navigate("/timeline");
   };
   const handleText = () => {
@@ -44,6 +46,7 @@ const Carddetails = () => {
       const exists = prev.some((friend) => friend.id === expectedFriends.id);
       return exists ? prev : [...prev, expectedFriends];
     });
+    toast.info("Text logged 💬");
     navigate("/timeline");
   };
   const handleVideo = () => {
@@ -51,6 +54,7 @@ const Carddetails = () => {
       const exists = prev.some((friend) => friend.id === expectedFriends.id);
       return exists ? prev : [...prev, expectedFriends];
     });
+    toast("Video call logged 🎥");
     navigate("/timeline");
   };
   return (
